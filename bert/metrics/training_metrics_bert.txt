@@ -1,0 +1,21 @@
+Final Test Accuracy: 0.8823
+Test Precision: 0.8425
+Test Recall: 0.9426
+Test F1-score: 0.8898
+Confusion Matrix:
+[[4073  888]
+ [ 289 4750]]
+
+Losses over Epochs:
+Epoch 1: Train Loss = 0.3151, Val Loss = 0.2729
+Epoch 2: Train Loss = 0.1923, Val Loss = 0.2542
+Epoch 3: Train Loss = 0.1027, Val Loss = 0.3531
+Epoch 4: Train Loss = 0.0552, Val Loss = 0.3706
+Epoch 5: Train Loss = 0.0365, Val Loss = 0.4743
+
+Accuracies over Epochs:
+Epoch 1: Train Acc = 0.8633, Val Acc = 0.8822
+Epoch 2: Train Acc = 0.9249, Val Acc = 0.8931
+Epoch 3: Train Acc = 0.9627, Val Acc = 0.8914
+Epoch 4: Train Acc = 0.9811, Val Acc = 0.8881
+Epoch 5: Train Acc = 0.9880, Val Acc = 0.8823

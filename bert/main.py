@@ -21,9 +21,7 @@ from transformers import (BertTokenizerFast,TFBertTokenizer,BertTokenizer,Robert
 import matplotlib.pyplot as plt
 import sys
 
-BATCH_SIZE= 8 
-NUM_EPOCHS= 10 
-SAMPLE_SIZE = 50000
+BATCH_SIZE=16
 
 print(sys.argv)
 if len(sys.argv)> 4 : 
@@ -67,6 +65,7 @@ print("SAMPLE_SIZE = ",SAMPLE_SIZE)
 print("Reading Dataset")
 df = pd.read_csv('../data/IMDB Dataset.csv')
 
+df = df.sample(25000)
 
 df = df.sample(SAMPLE_SIZE)
 new_values = {"negative":0,"positive":1 }

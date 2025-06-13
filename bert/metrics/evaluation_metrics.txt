@@ -1,0 +1,7 @@
+Precisão: 0.8733
+Recall: 0.9165
+F1-score: 0.8944
+Acurácia: 0.8909
+Matriz de confusão:
+[[4291  670]
+ [ 421 4618]]
