@@ -124,13 +124,6 @@ if len(all_preds) == 15000:
 else:
     print("Erro: A matriz de confusão não terá 15 mil registros!")
 
-# Gráfico único de loss e accuracy lado a lado
-# Substitua as listas abaixo pelos seus dados reais de treinamento
-# Exemplo:
-# train_losses = [...]
-# val_losses = [...]
-# train_accuracies = [...]
-# val_accuracies = [...]
 
 # Exemplo de listas simuladas caso não existam
 if 'train_losses' not in locals():

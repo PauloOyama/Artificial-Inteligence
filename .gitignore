@@ -1,3 +1,5 @@
 .venv/*
 tmp/*
+bert/bert_imdb_sentiment_model*.pt
+bert_imdb_sentiment_model*.pt
 

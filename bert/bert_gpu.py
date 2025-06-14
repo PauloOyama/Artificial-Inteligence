@@ -201,27 +201,27 @@ plt.savefig("confusion_matrix.png") # Salvar a matriz de confusão
 plt.show()
 
 # Plotar curvas de aprendizado
-epochs_range = range(EPOCHS)
+epochs_range = range(3)
 
-plt.figure(figsize=(12, 5))
+plt.figure(figsize=(10, 5))
 plt.subplot(1, 2, 1)
-plt.plot(train_losses, label='Train Loss')
-plt.plot(val_losses, label='Validation Loss')
+plt.plot(epochs_range, train_losses, label='Train Loss')
+plt.plot(epochs_range, val_losses, label='Validation Loss')
+plt.title('Loss over Epochs')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
-plt.title('Loss por Época')
 plt.legend()
 
 plt.subplot(1, 2, 2)
-plt.plot(train_accuracies, label='Train Accuracy')
-plt.plot(val_accuracies, label='Validation Accuracy')
+plt.plot(epochs_range, train_accuracies, label='Train Accuracy')
+plt.plot(epochs_range, val_accuracies, label='Validation Accuracy')
+plt.title('Accuracy over Epochs')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
-plt.title('Accuracy por Época')
 plt.legend()
 
 plt.tight_layout()
-plt.savefig('training_loss_accuracy.png')
+plt.savefig("learning_curves.png") # Salvar as curvas de aprendizado
 plt.show()
 
 # 9. Exemplo de inferência
