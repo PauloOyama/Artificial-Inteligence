@@ -36,3 +36,35 @@ jupyter notebook
 - `results.json`, `matrix_confusao.png`, `Number of interactions.png`: Resultados e gráficos gerados.
 
 ---
+## Naive Bayes Pipeline
+
+### Instalação de dependências
+
+Recomenda-se o uso de um ambiente virtual (por exemplo, com `venv`):
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+
+Instale as dependências necessárias:
+
+```bash
+pip install -r requirements_pipeline.txt
+```
+
+### Execução
+
+Para rodar o pipeline de Naive Bayes:
+
+```bash
+python naive_bayes_pipeline.py
+```
+
+O script irá:
+- Carregar o dataset IMDB.
+- Realizar o pré-processamento dos textos.
+- Treinar um classificador Naive Bayes.
+- Exibir métricas de acurácia, recall e f1-score no terminal.
+- Gerar e salvar a matriz de confusão como `confusion_matrix.png` na pasta.

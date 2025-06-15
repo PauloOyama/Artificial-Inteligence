@@ -169,13 +169,32 @@ def evaluate(model, loader):
     return np.array(y_true), np.array(y_pred)
 
 y_true, y_pred = evaluate(model, test_loader)
+
 acc = accuracy_score(y_true, y_pred)
 prec = precision_score(y_true, y_pred)
 rec = recall_score(y_true, y_pred)
 f1 = f1_score(y_true, y_pred)
-cm = confusion_matrix(y_true, y_pred)
 
-print(f"Test Accuracy: {acc:.4f} | Precision: {prec:.4f} | Recall: {rec:.4f} | F1: {f1:.4f}")
+print(f"Acurácia: {acc:.4f}")
+print(f"Precisão: {prec:.4f}")
+print(f"Recall: {rec:.4f}")
+print(f"F1-score: {f1:.4f}")
+
+cm = confusion_matrix(y_true, y_pred)
+print("Matriz de Confusão:")
+print(cm)
+
+from sklearn.metrics import ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+fig, ax = plt.subplots(figsize=(5,5))
+disp.plot(ax=ax, cmap='Blues', values_format='d')
+plt.title('Matriz de Confusão')
+plt.savefig('confusion_matrix.png')
+plt.close()
+
+np.savetxt('confusion_matrix.txt', cm, fmt='%d')
 
 # Salvar métricas e gráficos
 os.makedirs('metricas', exist_ok=True)
