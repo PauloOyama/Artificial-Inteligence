@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 version https://git-lfs.github.com/spec/v1
 oid sha256:bdab1427e1347c594fe488f94577b28004d955e47cdc1bfe8bcc4dfc2f6e2ca4
 size 80
+=======
+.venv/*
+tmp/*
+bert/bert_imdb_sentiment_model*.pt
+bert_imdb_sentiment_model*.pt
+
+>>>>>>> 9e7d5718bda85efbc2b0aa5346e0385b022bb86f

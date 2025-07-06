@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 version https://git-lfs.github.com/spec/v1
 oid sha256:278651747979ca97216db86cad13a1a96897586389b622db8d273ab1c907574c
 size 77
+=======
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.2
+matplotlib==3.7.1
+nltk==3.8.1
+>>>>>>> 9e7d5718bda85efbc2b0aa5346e0385b022bb86f
