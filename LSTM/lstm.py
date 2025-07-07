@@ -86,13 +86,13 @@ class SentimentLSTM(nn.Module):
 
 # Carregar o dataset IMDB
 # Substitua o caminho abaixo pelo caminho correto do seu arquivo CSV
-DATASET_PATH = '..\\data\\IMDB Dataset.csv'  # Compatível com Windows
-# DATASET_PATH = '../data/IMDB Dataset.csv'    # Descomente para sistemas Unix/Linux/Mac
+DATASET_PATH = '..\\data\\TwitterRenamed.csv'  # Compatível com Windows
+# DATASET_PATH = '../data/TwitterRenamed.csv'    # Descomente para sistemas Unix/Linux/Mac
 
 df = pd.read_csv(DATASET_PATH)
-df['sentiment'] = df['sentiment'].map({'positive': 1, 'negative': 0})
 
 # Split
+print('Split Traint/Test')
 df_train, df_test = train_test_split(df, test_size=0.2, random_state=42, stratify=df['sentiment'])
 df_train, df_val = train_test_split(df_train, test_size=0.1, random_state=42, stratify=df_train['sentiment'])
 
@@ -100,6 +100,7 @@ df_train, df_val = train_test_split(df_train, test_size=0.1, random_state=42, st
 total_texts = pd.concat([df_train['review'], df_val['review']])
 vocab = build_vocab(total_texts.tolist())
 
+print('Building Vocab')
 # Datasets e DataLoaders
 train_ds = TextDataset(df_train['review'].tolist(), df_train['sentiment'].tolist(), vocab, MAXLEN)
 val_ds = TextDataset(df_val['review'].tolist(), df_val['sentiment'].tolist(), vocab, MAXLEN)
@@ -144,7 +145,7 @@ def eval_epoch(model, loader, criterion):
             total_correct += (preds == y).sum().item()
             total += x.size(0)
     return total_loss / total, total_correct / total
-
+print('Starting Training ')
 train_losses, val_losses, train_accs, val_accs = [], [], [], []
 for epoch in range(EPOCHS):
     tr_loss, tr_acc = train_epoch(model, train_loader, criterion, optimizer)
@@ -168,6 +169,7 @@ def evaluate(model, loader):
             y_pred.extend(preds)
     return np.array(y_true), np.array(y_pred)
 
+print('Evaluating')
 y_true, y_pred = evaluate(model, test_loader)
 
 acc = accuracy_score(y_true, y_pred)

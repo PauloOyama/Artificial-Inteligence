@@ -22,11 +22,10 @@ print(f"GPU: {torch.cuda.get_device_name(0)}")
 
 # 2. Carregue o dataset IMDB
 print("Carregando o dataset IMDB...")
-dataset = load_dataset("csv", data_files={"train": "..\\data\\IMDB Dataset.csv"}, split="train")
+dataset = load_dataset("csv", data_files={"train": "..\\data\\TwitterRenamed.csv"}, split="train")
 
 # Converter os rótulos de string para inteiro
-label_map = {"positive": 1, "negative": 0}
-dataset = dataset.map(lambda x: {"sentiment": label_map[x["sentiment"]]})
+# dataset = dataset.map(lambda x: {"sentiment": label_map[x["sentiment"]]})
 
 # 3. Tokenização
 MODEL_NAME = 'bert-base-uncased'
@@ -53,8 +52,8 @@ dataset.set_format('torch', columns=['input_ids', 'attention_mask', 'sentiment']
 print("Maior valor em input_ids:", torch.max(dataset['input_ids']).item())
 
 # Split manual 80/20
-N_TRAIN = 35000
-N_TEST = 15000
+N_TRAIN = 1048572*8//10
+N_TEST = 1048572*2//10
 data_indices = np.arange(len(dataset['review']))
 train_idx, test_idx = train_test_split(data_indices, test_size=0.2, random_state=42)
 train_idx = train_idx[:N_TRAIN]
