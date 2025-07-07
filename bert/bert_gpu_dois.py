@@ -20,8 +20,8 @@ device = torch.device('cuda')
 print(f"Usando dispositivo: {device}")
 print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-# 2. Carregue o dataset IMDB
-print("Carregando o dataset IMDB...")
+# 2. Carregue o dataset Twitter
+print("Carregando o dataset Twitter...")
 dataset = load_dataset("csv", data_files={"train": "..\\data\\TwitterRenamed.csv"}, split="train")
 
 # Converter os rótulos de string para inteiro
@@ -77,7 +77,7 @@ def create_dataloader(ds, indices, batch_size):
 test_dataloader = create_dataloader(dataset, test_idx, BATCH_SIZE)
 
 # Caminho do modelo salvo
-model_save_path = "bert_imdb_sentiment_model_3.pt"
+model_save_path = "bert_Twitter_sentiment_model_3.pt"
 
 # Carregar o modelo treinado
 print("Carregando o modelo BERT treinado...")

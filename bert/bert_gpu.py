@@ -20,8 +20,8 @@ device = torch.device('cuda')
 print(f"Usando dispositivo: {device}")
 print(f"GPU: {torch.cuda.get_device_name(0)}")
 
-# 2. Carregue o dataset IMDB
-print("Carregando o dataset IMDB...")
+# 2. Carregue o dataset Twitter
+print("Carregando o dataset Twitter...")
 dataset = load_dataset("csv", data_files={"train": "..\\data\\TwitterRenamed.csv"}, split="train")
 
 # Converter os rótulos de string para inteiro
@@ -148,7 +148,7 @@ for epoch in range(EPOCHS):
     print(f"Epoch {epoch+1}/{EPOCHS}, Train Loss: {avg_train_loss:.4f}, Train Acc: {train_accuracy:.4f}, Val Loss: {avg_val_loss:.4f}, Val Acc: {val_accuracy:.4f}, Tempo: {epoch_time:.2f}s")
 
 # Salvar o modelo
-model_save_path = "bert_imdb_sentiment_model_3.pt"
+model_save_path = "bert_Twitter_sentiment_model_3.pt"
 torch.save(model.state_dict(), model_save_path)
 print(f"Modelo salvo em: {model_save_path}")
 

@@ -18,9 +18,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
 import matplotlib.pyplot as plt
 
-# 2. Carregue o dataset IMDB
-print("Carregando o dataset IMDB...")
-dataset = load_dataset("csv", data_files={"train": "../data/IMDB Dataset.csv"}, split="train")
+# 2. Carregue o dataset Twitter
+print("Carregando o dataset Twitter...")
+dataset = load_dataset("csv", data_files={"train": "../data/Twitter Dataset.csv"}, split="train")
 
 # Converter os rótulos de string para inteiro
 label_map = {"positive": 1, "negative": 0}

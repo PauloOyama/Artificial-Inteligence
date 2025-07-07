@@ -84,7 +84,7 @@ class SentimentLSTM(nn.Module):
         out = self.fc(out)
         return self.sigmoid(out).squeeze(1)
 
-# Carregar o dataset IMDB
+# Carregar o dataset Twitter
 # Substitua o caminho abaixo pelo caminho correto do seu arquivo CSV
 DATASET_PATH = '..\\data\\TwitterRenamed.csv'  # Compatível com Windows
 # DATASET_PATH = '../data/TwitterRenamed.csv'    # Descomente para sistemas Unix/Linux/Mac
