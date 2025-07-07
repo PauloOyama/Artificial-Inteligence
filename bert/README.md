@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:baecb4a3ecd9c1dcdeea0be4f718b925b23351e640d27ed1f8adf63e0159987d
-size 2003
-=======
-# BERT Sentiment Analysis - IMDB
+ BERT Sentiment Analysis - IMDB
 
 Este diretório contém scripts para análise de sentimentos no dataset IMDB utilizando o modelo BERT com PyTorch.
 
@@ -87,4 +82,3 @@ python bert_gpu_dois.py
 - Certifique-se de que o arquivo do dataset está no caminho correto.
 - Para melhores resultados, execute em uma máquina com GPU.
 - Para usar o modelo pré-treinado, basta baixar e colocar o arquivo no diretório dos scripts.
->>>>>>> 9e7d5718bda85efbc2b0aa5346e0385b022bb86f
