@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-version https://git-lfs.github.com/spec/v1
-oid sha256:6fb5884570f4c9b06726428e4ab53bcc8317f34c5299a3934ab971ce6bfd4669
-size 2003
-=======
-# Inteligência Artificial - Análise de Sentimentos IMDB
+# Inteligência Artificial - Análise de Sentimentos Twitter
 
-Este projeto reúne diferentes abordagens de aprendizado de máquina e deep learning para análise de sentimentos no dataset IMDB, explorando desde modelos clássicos até arquiteturas modernas de redes neurais.
+Este projeto reúne diferentes abordagens de aprendizado de máquina e deep learning para análise de sentimentos no dataset Twitter, explorando desde modelos clássicos até arquiteturas modernas de redes neurais.
 
 ## Estrutura do Projeto
 
@@ -16,9 +11,9 @@ Artificial-Inteligence/
 │
 ├── LSTM/           # Modelos LSTM para análise de sentimentos (SentimentLSTM)
 │
-├── Naive Bayes/    # Abordagem clássica com Naive Bayes (Jupyter)
+├── ./Modelos_Classicos.ipynb   # Abordagem clássica com Naive Bayes (Jupyter)
 │
-└── data/           # Dataset IMDB (arquivo CSV)
+└── data/           # Dataset Twitter (arquivo CSV)
 ```
 
 ## Descrição das Pastas
@@ -36,12 +31,12 @@ Artificial-Inteligence/
   Notebooks Jupyter com experimentos utilizando o classificador Naive Bayes, além de análises exploratórias e visualização de resultados.
 
 - **data/**
-  Contém o arquivo `IMDB Dataset.csv` com 50.000 avaliações de filmes rotuladas como positivas ou negativas.
+  Contém o arquivo `TwitterRenamed.csv` com 50.000 avaliações de filmes rotuladas como positivas ou negativas.
 
 ## Como começar
 
 1. **Escolha a abordagem:**
-   - Para modelos clássicos, acesse `Naive Bayes/`.
+   - Para modelos clássicos, acesse `Modelos_Classicos.ipynb`.
    - Para deep learning, explore `rnn/`, `LSTM/` ou `bert/`.
 
 2. **Instale as dependências** de cada pasta conforme instruções nos respectivos READMEs.
@@ -53,4 +48,3 @@ Artificial-Inteligence/
 O objetivo é comparar diferentes técnicas de processamento de linguagem natural (NLP) para análise de sentimentos, desde métodos tradicionais até modelos de última geração, promovendo aprendizado prático e análise crítica dos resultados.
 
 ---
->>>>>>> 9e7d5718bda85efbc2b0aa5346e0385b022bb86f
