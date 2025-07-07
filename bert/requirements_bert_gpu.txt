@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 version https://git-lfs.github.com/spec/v1
 oid sha256:68b903c224bc92e333184a8d3f0a6526293c4d7f24a4d73c694615b1b80e921e
 size 122
+=======
+python==3.10
+tensorflow==2.15.0
+transformers==4.39.3
+datasets==2.18.0
+numpy==1.26.4
+scikit-learn==1.3.2
+matplotlib==3.7.5 
+>>>>>>> 9e7d5718bda85efbc2b0aa5346e0385b022bb86f

@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca0c860212c1d8ba599d0e35e056f20a065c0cb011a5e544f4949c98eddbc726
-size 1943
+# Inteligência Artificial - Análise de Sentimentos Twitter
+
+Este projeto reúne diferentes abordagens de aprendizado de máquina e deep learning para análise de sentimentos no dataset Twitter, explorando desde modelos clássicos até arquiteturas modernas de redes neurais.
+
+## Estrutura do Projeto
+
+```
+Artificial-Inteligence/
+│
+├── bert/           # Modelos BERT para análise de sentimentos (PyTorch)
+│
+├── LSTM/           # Modelos LSTM para análise de sentimentos (SentimentLSTM)
+│
+├── ./Modelos_Classicos.ipynb   # Abordagem clássica com Naive Bayes (Jupyter)
+│
+└── data/           # Dataset Twitter (arquivo CSV)
+```
+
+## Descrição das Pastas
+
+- **bert/**
+  Scripts para treinamento, avaliação e inferência usando o modelo BERT (PyTorch). Inclui exemplos de uso, requisitos e instruções para baixar modelos pré-treinados.
+
+- **rnn/**
+  
+
+- **LSTM/**
+  Implementação de redes neurais recorrentes (LSTM) para análise de sentimentos. Contém scripts para treinamento, avaliação e geração de métricas.
+
+- **Naive Bayes/**
+  Notebooks Jupyter com experimentos utilizando o classificador Naive Bayes, além de análises exploratórias e visualização de resultados.
+
+- **data/**
+  Contém o arquivo `TwitterRenamed.csv` com 50.000 avaliações de filmes rotuladas como positivas ou negativas.
+
+## Como começar
+
+1. **Escolha a abordagem:**
+   - Para modelos clássicos, acesse `Modelos_Classicos.ipynb`.
+   - Para deep learning, explore `rnn/`, `LSTM/` ou `bert/`.
+
+2. **Instale as dependências** de cada pasta conforme instruções nos respectivos READMEs.
+
+3. **Execute os scripts ou notebooks** para treinar, avaliar e visualizar os resultados.
+
+## Sobre o Projeto
+
+O objetivo é comparar diferentes técnicas de processamento de linguagem natural (NLP) para análise de sentimentos, desde métodos tradicionais até modelos de última geração, promovendo aprendizado prático e análise crítica dos resultados.
+
+---
